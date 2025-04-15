@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  dev-api:
+    build: .
+    container_name: gitlab-bot
+    hostname: gitlab-bot
+    restart: unless-stopped
+    cap_add:
+      - SYS_TIME
+    ports:
+      - "4180:8000"
+    env_file:
+      - .env
