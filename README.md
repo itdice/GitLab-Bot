@@ -3,7 +3,6 @@
 이 프로젝트는 **GitLab Webhook 이벤트를 Mattermost 채널에 알림으로 전송**해주는 간단한 봇입니다.  
 FastAPI 기반으로 구현되었으며, Docker를 이용해 손쉽게 배포할 수 있습니다.
 
----
 
 ## ✨ 지원 기능
 
@@ -17,7 +16,6 @@ GitLab에서 다음과 같은 이벤트 발생 시, 해당 내용을 Mattermost 
 - ✅ Merge Request 승인
 - ⛔ Merge Request 닫기
 
----
 
 ## 📦 알림 예시
 
@@ -33,7 +31,6 @@ GitLab에서 다음과 같은 이벤트 발생 시, 해당 내용을 Mattermost 
 - Update README ([`h7i8j9k`](https://gitlab.com/...))
 ```
 
----
 
 ### 🌱 Branch 생성 / 삭제
 
@@ -42,7 +39,6 @@ GitLab에서 다음과 같은 이벤트 발생 시, 해당 내용을 Mattermost 
 🗑️ user_name deleted hotfix/temp-fix
 ```
 
----
 
 ### 📣 Merge Request 관련
 
@@ -70,7 +66,6 @@ MATTERMOST_LINK=https://your-mattermost.com/hooks/your-webhook-url
 > `GITLAB_WEBHOOK_SECRET`은 GitLab Webhook에서 설정한 Token과 일치해야 합니다.  
 > `MATTERMOST_LINK`는 Mattermost의 Incoming Webhook URL입니다.
 
----
 
 ### 2. Docker 빌드 및 실행
 
@@ -80,7 +75,6 @@ docker compose up --build -d
 
 FastAPI 서버는 기본적으로 `http://localhost:4180` 포트에서 실행됩니다.
 
----
 
 ### 3. GitLab Webhook 설정
 
@@ -90,7 +84,6 @@ GitLab 프로젝트 설정 > Webhooks 메뉴에서 다음과 같이 등록하세
 - **Secret Token**: `.env`에서 설정한 `GITLAB_WEBHOOK_SECRET`과 동일하게 입력
 - **Trigger**: `Push events`, `Merge request events` 체크
 
----
 
 ## 🛠 기술 스택
 
@@ -100,10 +93,8 @@ GitLab 프로젝트 설정 > Webhooks 메뉴에서 다음과 같이 등록하세
 - dotenv
 - Docker / Docker Compose
 
----
 
 ## 👤 제작자
 
 IT DICE — internal GitLab notification bot
 
----
