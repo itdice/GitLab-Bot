@@ -24,5 +24,11 @@ async def gitlab_link(request: Request):
         await handle_pushes(payload)
     elif event == "merge_request":
         await handle_merge_request(payload)
+    elif event == "pipeline":
+        await handle_pipeline(payload)
+    elif event == "release":
+        await handle_release(payload)
+    else:
+        print(f"Unknown event: {event}")
 
     return {"status": "ok"}
